@@ -1,0 +1,49 @@
+<style>
+    table,th,td
+    {
+      border:1px solid black;
+    }
+    table{
+      width: 50%;
+    }
+    
+    div
+    {
+      text-align: center;
+    }
+    
+    </style>
+    
+    
+    <div *ngIf="show!=undefined">
+      <h3>Iteam Details</h3>
+      <table align="center">
+        <tr>
+    <th>Items</th>
+    <th>Price</th>
+      </tr>
+      <tr>
+      <td>{{show.item1}}</td>
+    <td>{{show.price1}}</td>
+    </tr>
+    <tr>
+      
+      <td>{{show.item2}}</td> <td>{{show.price2}}</td>
+      </tr>
+      <tr><td><strong>Total:-</strong></td><td>{{total}}</td></tr>
+    </table>
+   <button (click)="checkout()">Checkout</button>
+  </div>
+      
+     
+    
+      <hr>
+      <hr>
+      <div *ngIf="a">
+        <h3>Total Bill</h3>
+    <strong> Total Amount:</strong>{{total1}}<br>
+    <strong>Tax:</strong>{{tax}}<br>
+    <strong>AmountPayable:</strong>{{amountpay}}<br>
+    </div>
+    
+    
